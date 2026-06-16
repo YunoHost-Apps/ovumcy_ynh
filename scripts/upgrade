@@ -39,14 +39,7 @@ pushd "$install_dir"
 	ynh_hide_warnings ynh_exec_as_app env CYPRESS_INSTALL_BINARY=0 NODE_OPTIONS=$NODE_OPTIONS npm run build
 	ynh_hide_warnings ynh_exec_as_app npm cache clean --force
 	ynh_hide_warnings ynh_exec_as_app npm prune --production
-
-	export GOPATH="$install_dir/build/go"
-	export GOCACHE="$install_dir/build/.cache"
-	ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=1 SECRET_KEY=$key go run ./cmd/ovumcy
 popd
-
-ynh_safe_rm "$install_dir/build"
-ynh_safe_rm "$install_dir/.cache"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATION

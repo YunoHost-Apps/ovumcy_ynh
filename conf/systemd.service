@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/script
+ExecStart=__GO_DIR__/go run __INSTALL_DIR__/cmd/ovumcy
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 

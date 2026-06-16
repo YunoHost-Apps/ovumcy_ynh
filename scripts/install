@@ -15,6 +15,9 @@ timezone=$(timedatectl show --value --property=Timezone)
 key=$(ynh_string_random --length=45 | base64)
 ynh_app_setting_set --key=key --value=$key
 
+registration_mode=closed
+ynh_app_setting_set --key=registration_mode --value=$registration_mode
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
@@ -41,14 +44,7 @@ pushd "$install_dir"
 	ynh_hide_warnings ynh_exec_as_app env CYPRESS_INSTALL_BINARY=0 NODE_OPTIONS=$NODE_OPTIONS npm run build
 	ynh_hide_warnings ynh_exec_as_app npm cache clean --force
 	ynh_hide_warnings ynh_exec_as_app npm prune --production
-
-	export GOPATH="$install_dir/build/go"
-	export GOCACHE="$install_dir/build/.cache"
-	ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=1 SECRET_KEY=$key go run ./cmd/ovumcy
 popd
-
-ynh_safe_rm "$install_dir/build"
-ynh_safe_rm "$install_dir/.cache"
 
 #=================================================
 # SYSTEM CONFIGURATION
