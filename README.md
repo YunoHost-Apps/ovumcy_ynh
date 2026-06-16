@@ -20,7 +20,7 @@ A menstrual cycle tracker you run yourself. Your data stays on your server.
 
 
 ## Screenshots
-![Screenshot of Ovumcy](./doc/screenshots/example.jpg)
+![Screenshot of Ovumcy](./doc/screenshots/ovumcy.jpg)
 
 ## 📦 Developer info
 
