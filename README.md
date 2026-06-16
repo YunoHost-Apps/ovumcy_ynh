@@ -24,9 +24,8 @@ It shall NOT be edited by hand.
 
 Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)
 
-[![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://example.com)
-[![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://demo.example.com)
-[![Version: 1.0~ynh1](https://img.shields.io/badge/Version-1.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/example/)
+[![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://ovumcy.com/)
+[![Version: 1.3.0~ynh1](https://img.shields.io/badge/Version-1.3.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/example/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/example"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
@@ -41,7 +40,7 @@ Explain in *a few (10~15) words* the purpose of the app or what it actually does
 
 [![Automatic tests level](https://apps.yunohost.org/badge/cilevel/example)](https://ci-apps.yunohost.org/ci/apps/example/)
 
-🛠️ Upstream Example app repository: <https://some.forge.com/example/example>
+🛠️ Upstream Example app repository: <https://github.com/ovumcy/ovumcy-web>
 
 Pull request are welcome and should target the [`testing` branch](https://github.com/YunoHost-Apps/example_ynh/tree/testing).
 
