@@ -1,11 +1,13 @@
 [Unit]
-Description=Small description of the service
+Description=Ovumcy service
 After=network.target
 
 [Service]
 Type=simple
 User=__APP__
 Group=__APP__
+EnvironmentFile=__INSTALL_DIR__/.env
+Environment=NODE_ENV=production
 WorkingDirectory=__INSTALL_DIR__/
 ExecStart=__GO_DIR__/go run __INSTALL_DIR__/cmd/ovumcy
 StandardOutput=append:/var/log/__APP__/__APP__.log
