@@ -32,10 +32,6 @@ ram.runtime = "120M"
     [install.domain]
     type = "domain"
 
-    [install.path]
-    type = "path"
-    default = "/ovumcy"
-
     [install.init_main_permission]
     type = "group"
     default = "visitors"

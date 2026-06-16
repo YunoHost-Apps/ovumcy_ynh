@@ -13,6 +13,14 @@ ynh_script_progression "Stopping $app's systemd service..."
 
 ynh_systemctl --service="$app" --action="stop"
 
+
+#=================================================
+# LOAD SETTINGS
+#=================================================
+
+timezone=$(timedatectl show --value --property=Timezone)
+
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
