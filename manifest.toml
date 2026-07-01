@@ -53,8 +53,8 @@ ram.runtime = "120M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/ovumcy/ovumcy-web/archive/refs/tags/v1.3.0.tar.gz"
-    sha256 = "7ce5f01404b30418f876c0530dfdd5b43b271261c195281043e9e23cb2590b57"
+    url = "https://github.com/ovumcy/ovumcy-web/archive/refs/tags/v1.4.0.tar.gz"
+    sha256 = "71e4ecd35637b7f9d1ef76d19478c5d819faa86ce3ddb177520d187fdf35524c"
 
     autoupdate.strategy = "latest_github_tag"
 
