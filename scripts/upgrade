@@ -47,11 +47,6 @@ pushd "$install_dir"
 	ynh_hide_warnings ynh_exec_as_app env CYPRESS_INSTALL_BINARY=0 NODE_OPTIONS="--max-old-space-size=3000" npm run build
 	ynh_hide_warnings ynh_exec_as_app npm cache clean --force
 	ynh_hide_warnings ynh_exec_as_app npm prune --production
-
-	export GOPATH="$install_dir/build/go"
-	export GOCACHE="$install_dir/build/.cache"
-	ynh_exec_as_app echo \'$password\' | ynh_hide_warnings go run ./cmd/ovumcy users create $admin_mail
-
 popd
 
 #=================================================
