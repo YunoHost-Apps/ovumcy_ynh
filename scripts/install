@@ -12,6 +12,9 @@ source /usr/share/yunohost/helpers
 
 timezone=$(timedatectl show --value --property=Timezone)
 
+admin=$(ynh_user_get_info --username=$admin --key=username)
+admin_mail=$(ynh_user_get_info --username=$admin --key=mail)
+
 key=$(ynh_string_random --length=45 | base64)
 ynh_app_setting_set --key=key --value=$key
 
@@ -42,7 +45,13 @@ pushd "$install_dir"
 	ynh_hide_warnings ynh_exec_as_app env CYPRESS_INSTALL_BINARY=0 NODE_OPTIONS="--max-old-space-size=3000" npm run build
 	ynh_hide_warnings ynh_exec_as_app npm cache clean --force
 	ynh_hide_warnings ynh_exec_as_app npm prune --production
+
+
+	ynh_exec_as_app echo \'$password\' | go run ./cmd/ovumcy users create $admin_mail
+
 popd
+
+
 
 #=================================================
 # SYSTEM CONFIGURATION

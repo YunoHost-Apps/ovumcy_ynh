@@ -20,6 +20,8 @@ ynh_systemctl --service="$app" --action="stop"
 
 timezone=$(timedatectl show --value --property=Timezone)
 
+admin=$(ynh_user_get_info --username=$admin --key=username)
+admin_mail=$(ynh_user_get_info --username=$admin --key=mail)
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -45,6 +47,9 @@ pushd "$install_dir"
 	ynh_hide_warnings ynh_exec_as_app env CYPRESS_INSTALL_BINARY=0 NODE_OPTIONS="--max-old-space-size=3000" npm run build
 	ynh_hide_warnings ynh_exec_as_app npm cache clean --force
 	ynh_hide_warnings ynh_exec_as_app npm prune --production
+
+	ynh_exec_as_app echo \'$password\' | go run ./cmd/ovumcy users create $admin_mail
+
 popd
 
 #=================================================
