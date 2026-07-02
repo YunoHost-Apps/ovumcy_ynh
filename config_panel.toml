@@ -1,0 +1,17 @@
+version = "1.0"
+
+[main]
+name.en = "Ovumcy configuration"
+name.fr = "Configuration de Ovumcy"
+services = [ "__APP__" ]
+
+    [main.config]
+    name.en = "Configuration options"
+    name.fr = "Options de configuration"
+
+        [main.config.registration_mode]
+        ask.en = "Open/close registrations?"
+        ask.fr = "Ouvrir/fermer l'enregistrement ?"
+        type = "select"
+        choices = ["open", "closed"]
+        bind = "REGISTRATION_MODE:__INSTALL_DIR__/.env"
