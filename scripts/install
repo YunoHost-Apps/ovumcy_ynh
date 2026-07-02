@@ -82,9 +82,6 @@ set -a
 
 source $install_dir/.env
 
-export GOPATH="$install_dir/build/go"
-export GOCACHE="$install_dir/build/.cache"
-
 printf '%s\n' "$password" | ynh_hide_warnings GOCACHE="$install_dir/build/.cache" "$install_dir/build/go" run ./cmd/ovumcy users create $admin_mail
 
 set +a
