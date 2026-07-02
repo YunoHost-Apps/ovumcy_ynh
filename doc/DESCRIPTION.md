@@ -1,1 +1,1 @@
-This is a dummy description of this app features
+Ovumcy is a privacy-first, self-hosted menstrual cycle tracker. It is built for people who want fast daily tracking, useful cycle insights, and data that stays under their control.
