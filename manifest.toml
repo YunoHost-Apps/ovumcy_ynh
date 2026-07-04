@@ -48,6 +48,7 @@ ram.runtime = "120M"
 
     [install.password]
     type = "password"
+    help.en = "Your password must be strong enough,or the installation will fail"
 
 [resources]
     [resources.sources]
