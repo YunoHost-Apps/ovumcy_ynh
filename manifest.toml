@@ -6,7 +6,7 @@ id = "ovumcy"
 name = "Ovumcy"
 description.en = "A menstrual cycle tracker you run yourself. Your data stays on your server."
 
-version = "1.9.1~ynh1"
+version = "1.9.2~ynh1"
 
 maintainers = ["Thovi98"]
 
@@ -54,8 +54,8 @@ ram.runtime = "120M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/ovumcy/ovumcy-web/archive/refs/tags/v1.9.1.tar.gz"
-    sha256 = "f04ddb8a2d8ad469ef795f1c648175014f11d4e8d110d09e4d47c6789d53a175"
+    url = "https://github.com/ovumcy/ovumcy-web/archive/refs/tags/v1.9.2.tar.gz"
+    sha256 = "23e7918642373474e3ea1db8a33517174b2daed1415a8c25bc637fc77dd918f9"
 
     autoupdate.strategy = "latest_github_tag"
 
