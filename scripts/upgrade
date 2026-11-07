@@ -69,7 +69,7 @@ ynh_config_add_logrotate
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start" --log_path="systemd" --wait_until="Ovumcy listening on" -t 60
+ynh_systemctl --service="$app" --action="start" --wait_until="Ovumcy listening on" -t 60
 
 #=================================================
 # END OF SCRIPT
