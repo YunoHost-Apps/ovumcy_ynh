@@ -56,7 +56,7 @@ ynh_restore "/var/log/$app/"
 #=================================================
 ynh_script_progression "Reloading NGINX web server and $app's service..."
 
-ynh_systemctl --service="$app" --action="start" --wait_until="Ovumcy listening on" -t 90
+ynh_systemctl --service="$app" --action="start" --wait_until="Ovumcy listening on" -t 180
 
 ynh_systemctl --service=nginx --action=reload
 
